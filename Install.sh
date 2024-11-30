@@ -1,19 +1,21 @@
 #!/bin/bash
 # Shell Banner for tools 
-echo "    ██╗  ██╗ █████╗ ██╗     ██╗███╗   ███╗██╗   ██╗██╗  ██╗"
-echo "    ██║ ██╔╝██╔══██╗██║     ██║████╗ ████║██║   ██║╚██╗██╔╝"
-echo "    █████╔╝ ███████║██║     ██║██╔████╔██║██║   ██║ ╚███╔╝ "
+echo -e "\033[31m    ██╗  ██╗ █████╗ ██╗     ██╗███╗   ███╗██╗   ██╗██╗  ██╗\033[0m"
+echo -e "\033[31m    ██║ ██╔╝██╔══██╗██║     ██║████╗ ████║██║   ██║╚██╗██╔╝\033[0m"
+echo -e "\033[31m    █████╔╝ ███████║██║     ██║██╔████╔██║██║   ██║ ╚███╔╝ \033[0m"
 echo "    ██╔═██╗ ██╔══██║██║     ██║██║╚██╔╝██║██║   ██║ ██╔██╗ "
 echo "    ██║  ██╗██║  ██║███████╗██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗"
 echo "    ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝"
+echo "                      Code By:J3sterr                                 "
+echo "               Team:BojonegoroDarknetSociety                                 "
 #! Default Directory
 install_dir="/data/data/com.termux/files/home/"
 
 #!Sesi instalasi
 echo "Pilih kategori tools yang mau diinstall:"
-select kategori in "Hacking" "Forensics" "Network" "Exit"; do
+select kategori in "Hacking [In Progress]" "Forensics [SOON]" "Network [SOON]" "Exit"; do
     case $kategori in
-        "Hacking") #! Kategori 1
+        "Hacking [In Progress]") #! Kategori 1
             echo "Pilih tools hacking yang mau diinstall:"
             select tool in "Metasploit" "Nmap" "JohnTheRipper" "Back" "Exit"; do
                 case $tool in
@@ -59,7 +61,7 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
             done
             break
             ;;
-        "Forensics") #! Kategori 2
+        "Forensics [SOON]") #! Kategori 2
             echo "Pilih tools forensics yang mau diinstall:"
             select tool in "Autopsy" "Wireshark" "Volatility" "Back" "Exit"; do
                 case $tool in
@@ -92,7 +94,7 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
             done
             break
             ;;
-        "Network") #! Kategori 3
+        "Network [SOON]") #! Kategori 3
             echo "Pilih tools network yang mau diinstall:"
             select tool in "Netcat" "Tcpdump" "Aircrack-ng" "Back" "Exit"; do
                 case $tool in
