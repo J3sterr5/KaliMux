@@ -13,7 +13,7 @@ install_dir="/data/data/com.termux/files/home/"
 echo "Pilih kategori tools yang mau diinstall:"
 select kategori in "Hacking" "Forensics" "Network" "Exit"; do
     case $kategori in
-        "Hacking")
+        "Hacking") #! Kategori 1
             echo "Pilih tools hacking yang mau diinstall:"
             select tool in "Metasploit" "Nmap" "JohnTheRipper" "Back" "Exit"; do
                 case $tool in
@@ -59,7 +59,7 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
             done
             break
             ;;
-        "Forensics")
+        "Forensics") #! Kategori 2
             echo "Pilih tools forensics yang mau diinstall:"
             select tool in "Autopsy" "Wireshark" "Volatility" "Back" "Exit"; do
                 case $tool in
@@ -92,7 +92,7 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
             done
             break
             ;;
-        "Network")
+        "Network") #! Kategori 3
             echo "Pilih tools network yang mau diinstall:"
             select tool in "Netcat" "Tcpdump" "Aircrack-ng" "Back" "Exit"; do
                 case $tool in
@@ -125,7 +125,7 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
             done
             break
             ;;
-        "Exit")
+        "Exit") #! Done 
             echo "Keluar dari script. Sampai jumpa, King!"
             exit
             ;;
