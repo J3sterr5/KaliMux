@@ -26,13 +26,16 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
                         break
                         ;;
                     "Nmap")
-                        echo "Install Nmap..."
-                        # Tambah perintah install Nmap
-                        break
-                        ;;
+                        echo "Sedang menginstall Nmap..."
+                        apt install nmap                         
                     "JohnTheRipper")
                         echo "Install JohnTheRipper..."
-                        # Tambah perintah install JohnTheRipper
+                        pkg install git cmake clang
+                        git clone https://github.com/openwall/john.git
+                        cd john
+                        ./configure
+                        make
+                        make install
                         break
                         ;;
                     "Back")
