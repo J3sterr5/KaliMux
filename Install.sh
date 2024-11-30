@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Shell Banner for tools 
 echo "    ██╗  ██╗ █████╗ ██╗     ██╗███╗   ███╗██╗   ██╗██╗  ██╗"
 echo "    ██║ ██╔╝██╔══██╗██║     ██║████╗ ████║██║   ██║╚██╗██╔╝"
@@ -8,7 +7,7 @@ echo "    ██╔═██╗ ██╔══██║██║     ██║�
 echo "    ██║  ██╗██║  ██║███████╗██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗"
 echo "    ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝"
 #! Default Directory
-install_dir="/data/data/com.termux/files/home"
+install_dir="/data/data/com.termux/files/home/"
 
 #!Sesi instalasi
 echo "Pilih kategori tools yang mau diinstall:"
@@ -25,11 +24,16 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
                         break
                         ;;
                     "Nmap") #! In Process
-                        pkg install nmap -y
                         echo "Sedang menginstall Nmap..."
+                        if pkg install nmap -y; then
+                            echo "Nmap berhasil diinstall, King! 🚀"
+                        else
+                            echo "Gagal menginstall Nmap. Cek koneksi atau repo Termux lo, King! 😟"
+                        fi
                         break
-                        ;;                        
-                    "JohnTheRipper")
+                        ;;
+                        
+                    "JohnTheRipper") 
                         echo "Install JohnTheRipper..."
                         pkg install git cmake clang
                         git clone https://github.com/openwall/john.git
