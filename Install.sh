@@ -6,8 +6,9 @@ echo -e "\033[31m    █████╔╝ ███████║██║    
 echo "    ██╔═██╗ ██╔══██║██║     ██║██║╚██╔╝██║██║   ██║ ██╔██╗ "
 echo "    ██║  ██╗██║  ██║███████╗██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗"
 echo "    ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝"
-echo "                      Code By:J3sterr                                 "
-echo "               Team:BojonegoroDarknetSociety                                 "
+echo -e "\033[31m                      Code By: J3sterr\033[0m"
+echo -e "\033[38;2;0;255;0m                Team:BojonegoroDarknetSociety\033[0m"
+
 #! Default Directory
 install_dir="/data/data/com.termux/files/home/"
 
