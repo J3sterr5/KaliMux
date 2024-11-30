@@ -26,8 +26,8 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
                         break
                         ;;
                     "Nmap")
-                        echo "Sedang menginstall Nmap..."
-                        apt install nmap                         
+                        pkg install nmap -y
+                        echo "Sedang menginstall Nmap..."                        
                     "JohnTheRipper")
                         echo "Install JohnTheRipper..."
                         pkg install git cmake clang
