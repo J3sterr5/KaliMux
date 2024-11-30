@@ -7,7 +7,6 @@ echo "    █████╔╝ ███████║██║     ██║�
 echo "    ██╔═██╗ ██╔══██║██║     ██║██║╚██╔╝██║██║   ██║ ██╔██╗ "
 echo "    ██║  ██╗██║  ██║███████╗██║██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗"
 echo "    ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝"
-
 #! Default Directory
 install_dir="/data/data/com.termux/files/home"
 
@@ -19,23 +18,27 @@ select kategori in "Hacking" "Forensics" "Network" "Exit"; do
             echo "Pilih tools hacking yang mau diinstall:"
             select tool in "Metasploit" "Nmap" "JohnTheRipper" "Back" "Exit"; do
                 case $tool in
-                    "Metasploit")
+                    "Metasploit") #?done
                         echo "Install Metasploit di $install_dir..."
                         mkdir -p "$install_dir/metasploit"  # Buat direktori untuk Metasploit
                         git clone https://github.com/rickyfazaa/MySPAMBot-OTP.git "$install_dir/metasploit"
                         break
                         ;;
-                    "Nmap")
+                    "Nmap") #! In Process
                         pkg install nmap -y
-                        echo "Sedang menginstall Nmap..."                        
+                        echo "Sedang menginstall Nmap..."
+                        break
+                        ;;                        
                     "JohnTheRipper")
                         echo "Install JohnTheRipper..."
                         pkg install git cmake clang
                         git clone https://github.com/openwall/john.git
-                        cd john
+                        pushd john
+                        chmod +x configure
                         ./configure
                         make
                         make install
+                        popd
                         break
                         ;;
                     "Back")
