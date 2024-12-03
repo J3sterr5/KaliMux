@@ -14,9 +14,9 @@ install_dir="/data/data/com.termux/files/home/"
 
 #!Sesi instalasi
 echo "Pilih kategori tools yang mau diinstall:"
-select kategori in "Hacking [In Progress]" "Forensics [SOON]" "Network [SOON]" "Exit"; do
+select kategori in "Hacking" "Forensics" "Network" "Exit"; do
     case $kategori in
-        "Hacking [In Progress]") #! Kategori 1
+        "Hacking") #! Kategori 1
             echo "Pilih tools hacking yang mau diinstall:"
             select tool in "Metasploit" "Nmap" "JohnTheRipper" "Back" "Exit"; do
                 case $tool in
